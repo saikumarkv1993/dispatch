@@ -4,7 +4,7 @@ LABEL maintainer="oss@netflix.com"
 LABEL org.opencontainers.image.title="Dispatch PyPI Wheel"
 LABEL org.opencontainers.image.description="PyPI Wheel Builder for Dispatch"
 LABEL org.opencontainers.image.url="https://dispatch.io/"
-LABEL org.opencontainers.image.source="https://github.com/netflix/dispatch"
+LABEL org.opencontainers.image.source="https://github.com/saikumarkv1993/dispatch"
 LABEL org.opencontainers.image.vendor="Netflix, Inc."
 LABEL org.opencontainers.image.authors="oss@netflix.com"
 
@@ -22,7 +22,7 @@ RUN set -x \
 ARG SOURCE_COMMIT
 ENV DISPATCH_BUILD=${SOURCE_COMMIT:-unknown}
 LABEL org.opencontainers.image.revision=$SOURCE_COMMIT
-LABEL org.opencontainers.image.licenses="https://github.com/netflix/dispatch/blob/${SOURCE_COMMIT:-master}/LICENSE"
+LABEL org.opencontainers.image.licenses="https://github.com/saikumarkv1993/dispatch/blob/${SOURCE_COMMIT:-master}/LICENSE"
 
 ARG DISPATCH_LIGHT_BUILD
 ENV DISPATCH_LIGHT_BUILD=${DISPATCH_LIGHT_BUILD}
@@ -59,9 +59,9 @@ FROM python:3.11.4-slim-buster
 LABEL maintainer="oss@dispatch.io"
 LABEL org.opencontainers.image.title="Dispatch"
 LABEL org.opencontainers.image.description="Dispatch runtime image"
-LABEL org.opencontainers.image.url="https://github.com/netflix/dispatch"
-LABEL org.opencontainers.image.documentation="https://github.com/netflix/dispatch"
-LABEL org.opencontainers.image.source="https://github.com/netflix/dispatch"
+LABEL org.opencontainers.image.url="https://github.com/saikumarkv1993/dispatch"
+LABEL org.opencontainers.image.documentation="https://github.com/saikumarkv1993/dispatch"
+LABEL org.opencontainers.image.source="https://github.com/saikumarkv1993/dispatch"
 LABEL org.opencontainers.image.vendor="Netflix, Inc."
 LABEL org.opencontainers.image.authors="oss@netflix.com"
 
@@ -114,4 +114,4 @@ CMD ["server", "start", "dispatch.main:app", "--host=0.0.0.0"]
 
 ARG SOURCE_COMMIT
 LABEL org.opencontainers.image.revision=$SOURCE_COMMIT
-LABEL org.opencontainers.image.licenses="https://github.com/netflix/dispatch/blob/${SOURCE_COMMIT:-master}/LICENSE"
+LABEL org.opencontainers.image.licenses="https://github.com/saikumarkv1993/dispatch/blob/${SOURCE_COMMIT:-master}/LICENSE"
